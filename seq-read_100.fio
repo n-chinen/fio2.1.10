@@ -1,0 +1,18 @@
+[seq-read-100%-4K]
+wait_for_previous
+description=seq read I/O 4K
+invalidate=1
+size=2G  
+
+directory=/home/test/fio/
+
+ramp_time=60
+runtime=180
+rw=read
+bs=4K
+direct=1
+time_based=1
+
+ioengine=libaio
+norandommap
+time_based
